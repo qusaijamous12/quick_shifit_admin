@@ -65,31 +65,33 @@ class _AllUsersState extends State<AllUsers> {
           const SizedBox(
             width: PaddingManger.kPadding/4,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            spacing: PaddingManger.kPadding/4,
-            children: [
-              Text(
-                'User Name : ${model.userName}',
-                style: getMyMediumTextStyle(color: Colors.black,fontSize: FontSize.s14),
-              ),
-              Text(
-                'User Email : ${model.email}',
-                style: getMyMediumTextStyle(color: Colors.black,fontSize: FontSize.s14),
-              ),
-              Text(
-                'User Major : ${model.major}',
-                style: getMyMediumTextStyle(color: Colors.black,fontSize: FontSize.s14),
-              ),
-              Text(
-                'User Uid : ${model.uid}',
-                style: getMyMediumTextStyle(color: Colors.black,fontSize: FontSize.s14),
-              ),
-              Text(
-                'User Phone : ${model.mobileNumber}',
-                style: getMyMediumTextStyle(color: Colors.black,fontSize: FontSize.s14),
-              )
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              spacing: PaddingManger.kPadding/4,
+              children: [
+                Text(
+                  'User Name : ${model.userName}',
+                  style: getMyMediumTextStyle(color: Colors.black,fontSize: FontSize.s14),
+                ),
+                Text(
+                  'User Email : ${model.email}',
+                  style: getMyMediumTextStyle(color: Colors.black,fontSize: FontSize.s14),
+                ),
+                Text(
+                  'User Major : ${model.major}',
+                  style: getMyMediumTextStyle(color: Colors.black,fontSize: FontSize.s14),
+                ),
+                Text(
+                  'User Uid : ${model.uid}',
+                  style: getMyMediumTextStyle(color: Colors.black,fontSize: FontSize.s14),
+                ),
+                Text(
+                  'User Phone : ${model.mobileNumber}',
+                  style: getMyMediumTextStyle(color: Colors.black,fontSize: FontSize.s14),
+                )
+              ],
+            ),
           )
         ],
       ),

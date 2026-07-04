@@ -12,15 +12,17 @@ class MyTextField extends StatefulWidget {
   final bool enabled;
   final TextInputType keyBoardType;
   final bool isPassword;
-  const MyTextField({super.key,required this.controller,required this.labelText,required this.prefixIcon,this.enabled=true,this.keyBoardType=TextInputType.emailAddress,this.isPassword=false});
+
+  const MyTextField(
+      {super.key, required this.controller, required this.labelText, required this.prefixIcon, this.enabled = true, this.keyBoardType = TextInputType
+          .emailAddress, this.isPassword = false});
 
   @override
   State<MyTextField> createState() => _MyTextFieldState();
 }
 
 class _MyTextFieldState extends State<MyTextField> {
-  bool obsecureText=false;
-
+  bool obsecureText = false;
 
 
   @override
@@ -36,29 +38,31 @@ class _MyTextFieldState extends State<MyTextField> {
       child: TextFormField(
         enabled: widget.enabled,
         obscureText: obsecureText,
-        maxLines: widget.isPassword==false? null:1,
+        maxLines: widget.isPassword == false ? null : 1,
         minLines: 1,
         keyboardType: widget.keyBoardType,
         controller: widget.controller,
         decoration: InputDecoration(
             labelText: widget.labelText,
             prefixIcon: widget.prefixIcon,
-            labelStyle:const TextStyle(
-              color: Colors.white
+            labelStyle: const TextStyle(
+                color: Colors.white
             ),
             border: InputBorder.none,
-          suffixIcon: widget.isPassword?GestureDetector(
-            onTap: (){
-              setState(() {
-                obsecureText=!obsecureText;
-              });
-            },
-              child:  Icon(obsecureText? Icons.visibility_off:Icons.visibility,color: Colors.white,)):const SizedBox()
+            suffixIcon: widget.isPassword ? GestureDetector(
+                onTap: () {
+                  setState(() {
+                    obsecureText = !obsecureText;
+                  });
+                },
+                child: Icon(
+                  obsecureText ? Icons.visibility_off : Icons.visibility,
+                  color: Colors.white,)) : const SizedBox()
 
 
         ),
-        style:const TextStyle(
-          color: Colors.white
+        style: const TextStyle(
+            color: Colors.white
         ),
       ),
     );

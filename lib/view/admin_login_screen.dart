@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loading_overlay/loading_overlay.dart';
-import 'package:quick_shift_admin/controller/login_controller.dart';
-import 'package:quick_shift_admin/shared/resources/color_manger/color_manger.dart';
-import 'package:quick_shift_admin/shared/utils/utils.dart';
-
-import '../shared/resources/app_icons.dart';
+import '../controller/login_controller.dart';
+import '../shared/resources/color_manger/color_manger.dart';
+import '../shared/utils/utils.dart';
 import '../shared/resources/app_styles.dart';
 import '../shared/resources/color_manger/app_colors.dart';
 import '../shared/widgets/my_button.dart';
